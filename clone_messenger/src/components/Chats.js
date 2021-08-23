@@ -21,6 +21,7 @@ const Chats = () => {
         return new File([data], "userPhoto.jpg", {type: 'image/jpeg'});
     }
 
+    //autentificação - firebase
     useEffect(() => {
         if(!user) {
             history.push('/');
