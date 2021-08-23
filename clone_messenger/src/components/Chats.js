@@ -21,7 +21,6 @@ const Chats = () => {
         return new File([data], "userPhoto.jpg", {type: 'image/jpeg'});
     }
 
-    //autentificação - firebase
     useEffect(() => {
         if(!user) {
             history.push('/');
@@ -50,8 +49,8 @@ const Chats = () => {
               axios
                 .post("https://api.chatengine.io/users", formdata, {
                   headers: {
-                    "private-key": process.env.REACT_APP_CHAT_ENGINE_KEY}}
-                    )
+                    "private-key": process.env.REACT_APP_CHAT_ENGINE_KEY},
+                })
                 .then(() => setLoading(false))
                 .catch((error) => console.log(error));
             });
